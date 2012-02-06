@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=buff
+comment0.target=CharArraySequence(char[])
+comment0.text=\r\n\ @param\ buff\r\n
+comment1.params=buff\ count
+comment1.target=CharArraySequence(char[],\ int)
+comment1.text=\r\n\ @param\ buff\r\n\ @param\ count\r\n
+comment2.params=buff\ offset\ count
+comment2.target=CharArraySequence(char[],\ int,\ int)
+comment2.text=\r\n\ @param\ buff\r\n\ @param\ offset\r\n\ @param\ count\r\n
+comment3.params=index
+comment3.target=char\ charAt(int)
+comment3.text=\r\n\ @see\ java.lang.CharSequence\#charAt(int)\r\n
+comment4.params=
+comment4.target=int\ length()
+comment4.text=\r\n\ @see\ java.lang.CharSequence\#length()\r\n
+comment5.params=beginIndex\ endIndex
+comment5.target=java.lang.CharSequence\ subSequence(int,\ int)
+comment5.text=\r\n\ @see\ java.lang.CharSequence\#subSequence(int,\ int)\r\n
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=h\ m\ s
+comment0.target=void\ setTime(int,\ int,\ int)
+comment1.params=
+comment1.target=java.lang.String\ toMilitary()
+comment2.params=
+comment2.target=java.lang.String\ toNormal()
+numComments=3

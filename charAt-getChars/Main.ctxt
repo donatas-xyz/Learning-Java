@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ charAt_getChars(java.lang.String[])
+comment1.params=arg
+comment1.target=void\ charArrayToString(java.lang.String[])
+comment2.params=arg
+comment2.target=void\ charArrayFromStringObject(java.lang.String[])
+comment3.params=arg
+comment3.target=void\ stringObjectsFromCharacterArrays(java.lang.String[])
+comment4.params=args
+comment4.target=void\ getCharsDemo(java.lang.String[])
+comment5.params=str
+comment5.target=java.lang.String\ deleteWhitespace(java.lang.String)
+comment5.text=\r\n\ Deletes\ all\ whitespaces\ from\ a\ String\ as\ defined\ by\r\n\ {@link\ Character\#isWhitespace(char)}.\r\n\r\n\ <pre>\r\n\ StringUtils.deleteWhitespace(null)\ \ \ \ \ \ \ \ \ \=\ null\r\n\ StringUtils.deleteWhitespace("")\ \ \ \ \ \ \ \ \ \ \ \=\ ""\r\n\ StringUtils.deleteWhitespace("abc")\ \ \ \ \ \ \ \ \=\ "abc"\r\n\ StringUtils.deleteWhitespace("\ \ \ ab\ \ c\ \ ")\ \=\ "abc"\r\n\ </pre>\r\n\r\n\ @param\ str\ \ the\ String\ to\ delete\ whitespace\ from,\ may\ be\ null\r\n\ @return\ the\ String\ without\ whitespaces,\ <code>null</code>\ if\ null\ String\ input\r\n
+comment6.params=str
+comment6.target=boolean\ isEmpty(java.lang.String)
+comment6.text=\r\n\ Checks\ if\ a\ String\ is\ empty\ ("")\ or\ null.\r\n\r\n\ <pre>\r\n\ StringUtils.isEmpty(null)\ \ \ \ \ \ \=\ true\r\n\ StringUtils.isEmpty("")\ \ \ \ \ \ \ \ \=\ true\r\n\ StringUtils.isEmpty("\ ")\ \ \ \ \ \ \ \=\ false\r\n\ StringUtils.isEmpty("bob")\ \ \ \ \ \=\ false\r\n\ StringUtils.isEmpty("\ \ bob\ \ ")\ \=\ false\r\n\ </pre>\r\n\r\n\ NOTE\:\ This\ method\ changed\ in\ Lang\ version\ 2.0.\r\n\ It\ no\ longer\ trims\ the\ String.\r\n\ That\ functionality\ is\ available\ in\ isBlank().\r\n\r\n\ @param\ str\ \ the\ String\ to\ check,\ may\ be\ null\r\n\ @return\ <code>true</code>\ if\ the\ String\ is\ empty\ or\ null\r\n
+numComments=7
