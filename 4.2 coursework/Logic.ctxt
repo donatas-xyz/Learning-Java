@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=aCounter
+comment0.target=Logic(Counter)
+comment1.params=
+comment1.target=long\ getValue()
+comment2.params=button
+comment2.target=void\ process(java.lang.String)
+numComments=3

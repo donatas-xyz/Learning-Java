@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=action\ number
+comment0.target=void\ evaluate(char,\ long)
+comment1.params=
+comment1.target=long\ getValue()
+comment2.params=number
+comment2.target=void\ setValue(long)
+comment3.params=
+comment3.target=void\ reset()
+numComments=4

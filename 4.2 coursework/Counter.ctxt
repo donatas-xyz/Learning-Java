@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=long\ getValue()
+comment1.params=
+comment1.target=void\ reset()
+comment2.params=
+comment2.target=void\ inc()
+comment3.params=
+comment3.target=void\ dec()
+comment4.params=
+comment4.target=void\ add5()
+comment5.params=
+comment5.target=void\ add10()
+comment6.params=
+comment6.target=void\ round()
+numComments=7

@@ -1,0 +1,123 @@
+class TestPM
+{ 
+  public static void main( String args[] )
+  {
+    ProcessMoney pm = new ProcessMoney();
+
+    int res = 0, expected = 100;
+
+    test( "setTicketPrice() & getTicketPrice() ");
+
+    pm.setTicketPrice( expected );
+    res = pm.getTicketPrice();
+    check( res == expected, 
+          "Ticket price is %d should be %d", res, expected );
+
+    expected = 200;
+    pm.setTicketPrice( expected );
+    res = pm.getTicketPrice();
+    check( res == expected, 
+          "Ticket price is %d should be %d", res, expected );
+    
+    test( "add() & getPaidSoFar()");
+
+    pm.add( 10 ); pm.add( 20 ); pm.add( 30 );
+    expected = 60;
+    res = pm.getPaidSoFar();
+    check( res == expected, 
+          "Money entered into machine is %d should be %d", res, expected );
+    pm.add( 20 ); pm.add( 40 ); pm.add( 40 );
+    expected = 160;
+    res = pm.getPaidSoFar();
+    check( res == expected, 
+          "Money entered into machine is %d should be %d", res, expected );
+    
+    test( "add() & cancel()");
+
+    pm.add( 10 ); pm.add( 20 ); pm.add( 30 );
+    expected = 0;
+    pm.cancel();
+    res = pm.getPaidSoFar();
+    check( res == expected, 
+          "money entered into machine is now %d should be 0", res );
+
+    pm.add( 100 ); pm.add( 200 ); pm.add( 300 );
+    expected = 0;
+    pm.cancel();
+    res = pm.getPaidSoFar();
+    check( res == expected, 
+          "money entered into machine is now %d should be 0", res );
+
+    test( "enough()");
+
+    pm.setTicketPrice( 200 );
+    pm.add( 100 ); pm.add( 100 ); pm.add( 0 );
+    expected = 200;
+    check( pm.enough(), 
+          "Enough money entered into machine 200 for 200 ticket" );
+    pm.cancel();
+
+    pm.setTicketPrice( 210 );
+    pm.add( 100 ); pm.add( 100 ); pm.add( 20 );
+    expected = 200;
+    check( pm.enough(), 
+          "Enough money entered into machine 220 for 210 ticket" );
+    pm.cancel();
+
+    test( "bought() & moneyInMachine()");
+
+    pm.setTicketPrice( 200 );
+    pm.add( 100 ); pm.add( 100 ); pm.add( 0 );
+    if ( pm.enough() )
+    {
+      pm.bought();
+    }
+    
+    expected = 200;
+    res = pm.moneyInMachine();
+    check( expected == res,
+          "Total money in machine %d should be %d", res, expected );
+    res = pm.getPaidSoFar();
+    check( res == 0, 
+          "Money for ticket in machine is %d should be 0", res );
+    pm.cancel();
+    
+
+    pm.setTicketPrice( 200 );
+    pm.add( 100 ); pm.add( 100 ); pm.add( 10 );
+    if ( pm.enough() )
+    {
+      pm.bought();
+    }
+
+    expected = 410;
+    res = pm.moneyInMachine();
+    check( expected == res,
+          "Total money in machine %d should be %d", res, expected );
+    res = pm.getPaidSoFar();
+    check( res == 0, 
+          "Money for ticket in machine is %d should be 0", res );
+
+    System.out.println( "Success" );
+  }
+
+  private static String what = "";
+
+  public static void check( boolean ok, String fmt, Object... params )
+  {
+    if ( ! ok )
+    {
+      System.out.println( what );
+      System.out.print("ERROR: " );
+      System.out.printf( fmt, params );
+      System.out.println();
+      System.exit(-1);
+    }
+  }
+
+  public static void test( String str )
+  {
+    what = "Test: "  + str;
+  }
+  
+}
